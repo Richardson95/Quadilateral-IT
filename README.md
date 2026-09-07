@@ -92,6 +92,13 @@ another shared store.
 
 Set `NEXT_PUBLIC_SITE_URL` to the production domain before deploying.
 
+The canonical URL is resolved once in `src/lib/site-url.ts` and reused by the
+metadata, sitemap, robots and JSON-LD. It tolerates the ways this value goes
+wrong in practice — a variable defined as an empty string, a bare host with no
+protocol, stray whitespace, a trailing slash — and falls back through
+`VERCEL_PROJECT_PRODUCTION_URL`, `VERCEL_URL` and finally `site.url`. A bad
+value can degrade the canonical URL, but it can no longer fail the build.
+
 ## Accessibility
 
 Skip link, visible focus rings, labelled form fields with inline errors,

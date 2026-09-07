@@ -7,6 +7,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Backdrop } from "@/components/ui/backdrop";
 import { BackToTop, ScrollProgress } from "@/components/ui/chrome";
 import { site } from "@/lib/site";
+import { siteUrl } from "@/lib/site-url";
 import { structuredData } from "@/lib/structured-data";
 
 const inter = Inter({
@@ -20,8 +21,6 @@ const sora = Sora({
   variable: "--font-display",
   display: "swap",
 });
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? site.url;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
