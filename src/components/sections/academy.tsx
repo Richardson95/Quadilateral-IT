@@ -94,7 +94,7 @@ export function Academy() {
                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                   </a>
                   <a
-                    href={`mailto:${site.academyEmail}`}
+                    href={`mailto:${site.email}`}
                     className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-line px-6 text-sm font-semibold transition-colors hover:bg-(--card-hover)"
                   >
                     <Users className="size-4" />

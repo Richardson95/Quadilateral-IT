@@ -12,8 +12,6 @@ export const site = {
     "Quadilateral IT is a product-led consultancy building software, AI automation and data platforms for founders, startups and enterprises — plus an academy training the next generation of engineers.",
   url: "https://quadilateral.org",
   email: "hello@quadilateral.org",
-  salesEmail: "projects@quadilateral.org",
-  academyEmail: "academy@quadilateral.org",
   phone: "+234 000 000 0000",
   location: "Lagos, Nigeria — working with teams worldwide",
   timezone: "WAT (GMT+1) · overlapping hours with EU & US East",
@@ -658,18 +656,3 @@ export const faqs = [
     a: "Then we augment rather than replace. Our engineers join your stand-ups, follow your conventions and review code alongside your team. Many clients start this way and keep a squad for years.",
   },
 ];
-
-export const budgets = [
-  "Under $5,000",
-  "$5,000 – $15,000",
-  "$15,000 – $50,000",
-  "$50,000+",
-  "Retainer / ongoing",
-  "Academy enrolment",
-] as const;
-
-export const serviceOptions = [
-  ...services.map((s) => s.title),
-  "Academy / training",
-  "Something else",
-] as const;
