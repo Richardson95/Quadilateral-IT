@@ -80,7 +80,7 @@ export function Hero() {
             className="mt-10 flex flex-col items-center gap-3 sm:flex-row"
           >
             <a
-              href="#contact"
+              href={`mailto:${site.email}`}
               className="group inline-flex h-13 w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(110deg,var(--color-brand-600),var(--color-violet-brand)_55%,var(--color-accent-500))] bg-[length:200%_auto] px-8 text-[15px] font-semibold text-white shadow-[0_14px_44px_-12px_var(--color-brand-600)] transition-all duration-500 hover:bg-[position:right_center] hover:-translate-y-0.5 sm:w-auto"
             >
               Start a project

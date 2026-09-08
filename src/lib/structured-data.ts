@@ -1,4 +1,4 @@
-import { faqs, services, site, tracks } from "@/lib/site";
+import { faqs, leadership, services, site, tracks } from "@/lib/site";
 
 /**
  * JSON-LD graph: organisation, the services we offer, the academy courses and
@@ -21,6 +21,7 @@ export function structuredData(siteUrl: string) {
       addressCountry: "NG",
     },
     areaServed: "Worldwide",
+    founder: leadership.map((leader) => ({ "@id": `${siteUrl}#${leader.slug}` })),
     sameAs: Object.values(site.socials),
     knowsAbout: services.map((service) => service.title),
     hasOfferCatalog: {
@@ -36,6 +37,19 @@ export function structuredData(siteUrl: string) {
       })),
     },
   };
+
+  const people = leadership.map((leader) => ({
+    "@type": "Person",
+    "@id": `${siteUrl}#${leader.slug}`,
+    name: leader.name,
+    ...(leader.credential ? { honorificSuffix: leader.credential } : {}),
+    jobTitle: leader.role,
+    description: leader.bio[0],
+    image: `${siteUrl}${leader.photo}`,
+    knowsAbout: leader.focus,
+    homeLocation: { "@type": "Place", name: leader.location },
+    worksFor: { "@id": `${siteUrl}#organization` },
+  }));
 
   const courses = tracks.map((track) => ({
     "@type": "Course",
@@ -66,6 +80,6 @@ export function structuredData(siteUrl: string) {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [organization, website, faqPage, ...courses],
+    "@graph": [organization, ...people, website, faqPage, ...courses],
   };
 }

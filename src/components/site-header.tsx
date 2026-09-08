@@ -91,7 +91,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <a
-            href="#contact"
+            href={`mailto:${site.email}`}
             className="group hidden h-10 items-center gap-1.5 rounded-full bg-[linear-gradient(110deg,var(--color-brand-600),var(--color-violet-brand))] px-5 text-sm font-semibold text-white shadow-[0_8px_28px_-10px_var(--color-brand-600)] transition-transform hover:-translate-y-0.5 sm:inline-flex"
           >
             Start a project
@@ -130,7 +130,7 @@ export function SiteHeader() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href={`mailto:${site.email}`}
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(110deg,var(--color-brand-600),var(--color-violet-brand))] text-sm font-semibold text-white"
               >

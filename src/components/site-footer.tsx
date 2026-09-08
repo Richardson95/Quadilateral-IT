@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/social-icons";
 import { Container } from "@/components/ui/primitives";
 import { Logo } from "@/components/logo";
-import { NewsletterForm } from "@/components/newsletter-form";
 import { nav, services, site, tracks } from "@/lib/site";
 
 const socialLinks = [
@@ -23,22 +22,6 @@ export function SiteFooter() {
   return (
     <footer className="relative border-t border-line bg-[color-mix(in_oklab,var(--bg-elevated)_60%,transparent)]">
       <Container className="py-16 sm:py-20">
-        {/* Newsletter band */}
-        <div className="mb-14 flex flex-col gap-6 rounded-4xl glass p-8 sm:p-10 lg:flex-row lg:items-center lg:justify-between">
-          <div className="max-w-md">
-            <h2 className="text-xl font-semibold sm:text-2xl">
-              The <span className="gradient-text">Quadilateral Brief</span>
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-muted">
-              What we are learning about shipping software, adopting AI without the
-              hype, and running products that stay cheap to operate.
-            </p>
-          </div>
-          <div className="w-full lg:max-w-sm">
-            <NewsletterForm />
-          </div>
-        </div>
-
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Logo />
@@ -88,7 +71,6 @@ export function SiteFooter() {
             title="Company"
             links={[
               ...nav.map((item) => ({ label: item.label, href: item.href })),
-              { label: "Contact", href: "#contact" },
             ]}
           />
         </div>
@@ -96,10 +78,6 @@ export function SiteFooter() {
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-line pt-8 text-xs text-subtle sm:flex-row">
           <p>
             © {year} {site.legalName}. All rights reserved.
-          </p>
-          <p className="flex items-center gap-1.5">
-            <span className="size-1.5 rounded-full bg-emerald-400" />
-            Built in-house with Next.js and TypeScript — {site.location}
           </p>
         </div>
       </Container>

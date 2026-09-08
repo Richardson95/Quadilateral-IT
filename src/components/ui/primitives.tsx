@@ -58,7 +58,7 @@ export function SectionHeading({
   className,
 }: {
   eyebrow: string;
-  title: ReactNode;
+  title?: ReactNode;
   lead?: ReactNode;
   align?: "center" | "left";
   className?: string;
@@ -72,9 +72,11 @@ export function SectionHeading({
       )}
     >
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="max-w-3xl text-3xl font-semibold leading-[1.1] sm:text-4xl md:text-5xl">
-        {title}
-      </h2>
+      {title ? (
+        <h2 className="max-w-3xl text-3xl font-semibold leading-[1.1] sm:text-4xl md:text-5xl">
+          {title}
+        </h2>
+      ) : null}
       {lead ? (
         <p className="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
           {lead}

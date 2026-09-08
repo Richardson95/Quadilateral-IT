@@ -28,7 +28,7 @@ export function Faq() {
               lead="Still unsure about something? Send it over — we reply to every enquiry within one business day."
             />
             <a
-              href="#contact"
+              href={`mailto:${site.email}`}
               className="mt-8 inline-flex h-11 items-center gap-2 rounded-full border border-line px-5 text-sm font-semibold transition-colors hover:bg-(--card-hover)"
             >
               <MessageCircleQuestion className="size-4" />

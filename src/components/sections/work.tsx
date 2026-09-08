@@ -122,11 +122,7 @@ export function Work() {
 
         <Reveal delay={0.1}>
           <p className="mt-12 text-center text-sm text-subtle">
-            Under NDA we can still walk you through architecture and outcomes.{" "}
-            <a href="#contact" className="font-semibold text-(--fg) underline underline-offset-4">
-              Ask for the full portfolio
-            </a>
-            .
+            Under NDA we can still walk you through architecture and outcomes.
           </p>
         </Reveal>
       </Container>

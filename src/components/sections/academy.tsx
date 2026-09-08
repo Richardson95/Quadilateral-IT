@@ -87,7 +87,7 @@ export function Academy() {
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <a
-                    href="#contact"
+                    href={`mailto:${site.email}`}
                     className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[linear-gradient(110deg,var(--color-brand-600),var(--color-violet-brand))] px-6 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                   >
                     Reserve a seat

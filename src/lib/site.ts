@@ -10,10 +10,10 @@ export const site = {
   tagline: "We turn ambitious ideas into software that ships.",
   description:
     "Quadilateral IT is a product-led consultancy building software, AI automation and data platforms for founders, startups and enterprises — plus an academy training the next generation of engineers.",
-  url: "https://quadilateral.it",
-  email: "hello@quadilateral.it",
-  salesEmail: "projects@quadilateral.it",
-  academyEmail: "academy@quadilateral.it",
+  url: "https://quadilateral.org",
+  email: "hello@quadilateral.org",
+  salesEmail: "projects@quadilateral.org",
+  academyEmail: "academy@quadilateral.org",
   phone: "+234 000 000 0000",
   location: "Lagos, Nigeria — working with teams worldwide",
   timezone: "WAT (GMT+1) · overlapping hours with EU & US East",
@@ -31,6 +31,7 @@ export const nav = [
   { label: "Services", href: "#services" },
   { label: "Work", href: "#work" },
   { label: "Process", href: "#process" },
+  { label: "Founders", href: "#founders" },
   { label: "Academy", href: "#academy" },
   { label: "FAQ", href: "#faq" },
 ] as const;
@@ -155,6 +156,19 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "product-marketing",
+    icon: "Megaphone",
+    title: "Product Marketing",
+    blurb:
+      "Positioning, messaging and launches that make the product land — so the thing you built is the thing the market understands.",
+    bullets: [
+      "Positioning, messaging and pricing narrative",
+      "Launch and go-to-market campaigns",
+      "Landing pages, demos and sales collateral",
+      "Onboarding, activation and retention loops",
+    ],
+  },
+  {
     slug: "design",
     icon: "Palette",
     title: "Product Design",
@@ -168,6 +182,124 @@ export const services: Service[] = [
     ],
   },
 ];
+
+export type LeaderCard = {
+  title: string;
+  subtitle: string;
+  detail: string;
+};
+
+export type Leader = {
+  slug: string;
+  name: string;
+  credential?: string;
+  role: string;
+  location: string;
+  photo: string;
+  photoWidth: number;
+  photoHeight: number;
+  hats: string[];
+  bio: string[];
+  focusLabel: string;
+  focus: string[];
+  cardsLabel: string;
+  cards: LeaderCard[];
+};
+
+export const founder: Leader = {
+  slug: "ayinde-abiodun",
+  name: "Dr. Ayinde Abiodun",
+  credential: "PhD",
+  role: "Founder & Chief Executive Officer",
+  location: "United States",
+  photo: "/founder-ayinde-abiodun.jpg",
+  photoWidth: 2316,
+  photoHeight: 3088,
+  hats: ["Researcher", "Lecturer", "Entrepreneur"],
+  bio: [
+    "Dr. Ayinde Abiodun founded Quadilateral IT on a simple conviction: the gap between what enterprises know about their data and what they can actually do with it is an engineering problem, not a reporting one. He holds a PhD and works at the intersection of research, teaching and building — a combination that shapes how every engagement here is scoped.",
+    "He works in the United States as a senior secured data specialist, and that is not a side note — it is the standard the consultancy is held to. Enterprise data migration, platform administration, data governance and process automation are his daily work. He has led the move of analytics platforms from desktop to cloud, run server upgrades against strict compliance and uptime requirements, and driven the adoption of analytics tooling across organisations that had never standardised on any.",
+    "Alongside the consultancy he founded Kudi9ja Technologies and La Marida Hotels, so he has sat on the client side of a build as often as the delivery side. As a lecturer and community trainer he also leads the Academy's curriculum, which is why the teaching here looks like the work rather than a syllabus.",
+  ],
+  focusLabel: "Areas of focus",
+  focus: [
+    "Data governance and compliance",
+    "Enterprise data migration",
+    "Cloud migration and infrastructure optimisation",
+    "Process automation and workflow design",
+    "Interactive analytics and dashboard development",
+    "Application integration and data quality",
+  ],
+  cardsLabel: "Ventures he founded",
+  cards: [
+    {
+      title: "Quadilateral IT",
+      subtitle: "Founder & CEO",
+      detail:
+        "The consultancy and academy — software, AI, data and the training pipeline behind them.",
+    },
+    {
+      title: "Kudi9ja Technologies",
+      subtitle: "Founder",
+      detail:
+        "Consumer fintech for the Nigerian market: payments, savings and bill management at scale.",
+    },
+    {
+      title: "La Marida Hotels",
+      subtitle: "Founder",
+      detail:
+        "Hospitality group — the operations side of the business, and a live testbed for what we automate.",
+    },
+  ],
+};
+
+export const coFounder: Leader = {
+  slug: "emmanuel-adeyemo",
+  name: "Emmanuel Iyanuoluwa Adeyemo",
+  role: "Co-Founder & Chief Technology Officer",
+  location: "Nigeria",
+  photo: "/cofounder-emmanuel-adeyemo.jpg",
+  photoWidth: 978,
+  photoHeight: 1280,
+  hats: ["Senior Software Engineer", "Cybersecurity Analyst", "Mentor"],
+  bio: [
+    "Emmanuel Iyanuoluwa Adeyemo has spent more than a decade in the tech industry, and it shows in the unglamorous places: how a system fails, how a migration is sequenced, how much of a codebase a new engineer can safely touch in their first week. He is the co-founder who owns how Quadilateral IT actually builds.",
+    "He is a senior software engineer with a long shipping record across web, mobile and platform work — products that went to real users and then had to be kept alive. Trained at Curtin University in Australia, he pairs that engineering practice with work as a cybersecurity analyst, so threat modelling, access control and secure defaults are part of the first architecture conversation rather than a pre-launch audit.",
+    "Based in Nigeria, he runs delivery on the ground with the engineering team. He has also tutored over fifty women into technology careers — a teaching instinct that runs straight through the Academy and through the way our engineers hand a product over: documented, reviewed and genuinely owned by your team at the end.",
+  ],
+  focusLabel: "Where he goes deep",
+  focus: [
+    "Web, mobile and platform engineering",
+    "Secure architecture and threat modelling",
+    "Application security and access control",
+    "Code review and engineering standards",
+    "Technical mentoring and team growth",
+    "Product delivery from zero to scale",
+  ],
+  cardsLabel: "The short version",
+  cards: [
+    {
+      title: "10+ years",
+      subtitle: "In the tech space",
+      detail:
+        "A decade of shipping and maintaining production software across startups and enterprise teams.",
+    },
+    {
+      title: "50+ women tutored",
+      subtitle: "Into tech careers",
+      detail:
+        "Mentorship that became a pipeline — and the model the Quadilateral Academy is built on.",
+    },
+    {
+      title: "Curtin University",
+      subtitle: "Australia",
+      detail:
+        "Formal engineering foundations, paired with cybersecurity practice he applies on every build.",
+    },
+  ],
+};
+
+export const leadership: Leader[] = [founder, coFounder];
 
 export type Project = {
   name: string;
@@ -183,10 +315,10 @@ export const projects: Project[] = [
   {
     name: "Kudi9ja",
     category: "Fintech · Mobile",
-    year: "2024",
+    year: "2026",
     summary:
       "A Nigerian consumer finance app for payments, savings and bill management — designed, built and maintained end to end, from onboarding and KYC through to a fraud-aware transaction engine.",
-    tags: ["React Native", "Node.js", "PostgreSQL", "Paystack", "KYC"],
+    tags: ["Flutter", "Java", "PostgreSQL", "Neon", "Paystack", "KYC"],
     metrics: [
       { value: "4.7★", label: "Store rating" },
       { value: "<1.2s", label: "Cold start" },
@@ -197,7 +329,7 @@ export const projects: Project[] = [
   {
     name: "Estate Atlas",
     category: "Real Estate · Web Platform",
-    year: "2024",
+    year: "2025",
     summary:
       "A property sales and management platform with virtual tours, instalment payment plans, agent commissions and an allocation engine that replaced a wall of spreadsheets.",
     tags: ["Next.js", "TypeScript", "Mapbox", "Stripe", "Prisma"],
@@ -211,7 +343,7 @@ export const projects: Project[] = [
   {
     name: "Nimbus Support AI",
     category: "AI Automation",
-    year: "2025",
+    year: "2026",
     summary:
       "A retrieval-augmented support agent trained on a help centre and years of ticket history, triaging conversations and drafting replies with a human approval step before anything reaches a customer.",
     tags: ["RAG", "Claude + OpenAI", "pgvector", "Zendesk"],
@@ -225,7 +357,7 @@ export const projects: Project[] = [
   {
     name: "Pulse Analytics",
     category: "Data Platform",
-    year: "2023",
+    year: "2025",
     summary:
       "A warehouse and executive dashboard suite unifying eleven data sources into one daily source of truth, with automated anomaly alerts pushed straight to Slack.",
     tags: ["BigQuery", "dbt", "Airflow", "Looker Studio"],
@@ -239,7 +371,7 @@ export const projects: Project[] = [
   {
     name: "Ledgerly",
     category: "SaaS · B2B",
-    year: "2023",
+    year: "2025",
     summary:
       "Multi-tenant accounting and invoicing SaaS for African SMEs, with offline-first sync, role-based access and an audit trail regulators actually accept.",
     tags: ["Next.js", "NestJS", "Redis", "Stripe Billing"],
@@ -253,7 +385,7 @@ export const projects: Project[] = [
   {
     name: "CampusFlow",
     category: "EdTech",
-    year: "2022",
+    year: "2024",
     summary:
       "A student information and learning platform for a private university group — admissions, results, fees and a live class portal serving thousands of concurrent users.",
     tags: ["Laravel", "React", "AWS", "WebRTC"],
