@@ -22,7 +22,6 @@ export const site = {
     github: "https://github.com/quadilateral-it",
     instagram: "https://instagram.com/quadilateralit",
   },
-  booking: "https://cal.com/quadilateral/intro",
 } as const;
 
 export const nav = [
