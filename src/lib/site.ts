@@ -14,6 +14,7 @@ export const site = {
   email: "hello@quadilateral.org",
   phone: "+234 000 000 0000",
   location: "Lagos, Nigeria — working with teams worldwide",
+  booking: "https://cal.com/quadilateral/30min",
   timezone: "WAT (GMT+1) · overlapping hours with EU & US East",
   founded: "2021",
   socials: {

@@ -87,7 +87,9 @@ export function Hero() {
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href={`mailto:${site.email}?subject=${encodeURIComponent("Intro call")}`}
+              href={site.booking}
+              target="_blank"
+              rel="noreferrer noopener"
               className="glass inline-flex h-13 w-full items-center justify-center gap-2 rounded-full px-8 text-[15px] font-semibold transition-colors hover:bg-(--card-hover) sm:w-auto"
             >
               <CalendarClock className="size-4" />
